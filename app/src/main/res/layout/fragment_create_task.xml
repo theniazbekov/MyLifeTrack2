@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_con"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardUseCompatPadding="true"
+    tools:context=".ui.fragments.CreateTaskFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="333dp">
+
+
+        <EditText
+            android:id="@+id/et_task"
+            style="@style/EditTextTask"
+            android:background="@drawable/oval"
+            android:gravity="center"
+            android:hint="@string/need_task"
+            android:textColorHint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_choose_date"
+            style="@style/DueDate"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/oval"
+            android:text="@string/date"
+            app:drawableEndCompat="@drawable/ic_calendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_task" />
+
+
+        <TextView
+            android:id="@+id/tv_choose_regular"
+            style="@style/DueDate"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/oval"
+            android:text="@string/every_week"
+            app:drawableEndCompat="@drawable/ic_arrow_down"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_task" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/apply_btn"
+            style="@style/EditTextTask"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginVertical="22dp"
+            android:background="@drawable/oval"
+            android:backgroundTint="@color/teal_200"
+            android:text="@string/apply_btn"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_choose_regular" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
